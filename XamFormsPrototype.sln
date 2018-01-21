@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsPrototype.iOS", "Xa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsPrototype.UWP", "XamFormsPrototype\XamFormsPrototype.UWP\XamFormsPrototype.UWP.csproj", "{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsPrototype", "XamFormsPrototype\XamFormsPrototype\XamFormsPrototype.csproj", "{496BF925-6FB1-4AE5-AA2F-563855772573}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamFormsPrototype", "XamFormsPrototype\XamFormsPrototype\XamFormsPrototype.csproj", "{496BF925-6FB1-4AE5-AA2F-563855772573}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -179,7 +179,9 @@ Global
 		{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}.AppStore|x86.ActiveCfg = Release|x86
 		{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}.AppStore|x86.Build.0 = Release|x86
 		{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}.AppStore|x86.Deploy.0 = Release|x86
-		{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}.Debug|Any CPU.Build.0 = Debug|x64
+		{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}.Debug|Any CPU.Deploy.0 = Debug|x64
 		{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}.Debug|ARM.ActiveCfg = Debug|ARM
 		{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}.Debug|ARM.Build.0 = Debug|ARM
 		{F6EA9033-75FC-4B1B-8AB7-AA5811BF1C9F}.Debug|ARM.Deploy.0 = Debug|ARM

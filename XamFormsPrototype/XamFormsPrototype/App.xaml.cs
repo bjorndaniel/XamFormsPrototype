@@ -1,19 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+using XamFormsPrototype.Enumerators;
+using XamFormsPrototype.Helpers.Messages;
+using XamFormsPrototype.UI.Views;
 
 namespace XamFormsPrototype
 {
-	public partial class App : Application
+    public partial class App : Application
 	{
 		public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new XamFormsPrototype.MainPage();
+            MainPage = new LogInPage();
+            MessagingCenter.Subscribe<NavigationMessage>(this, string.Empty, (m) =>
+            {
+                if (m.Page == Pages.Main)
+                {
+                    MainPage = new MainPage();
+                }
+            });
 		}
 
 		protected override void OnStart ()

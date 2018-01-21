@@ -104,6 +104,9 @@
     <None Include="XamFormsPrototype.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="xamagon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />
@@ -148,12 +151,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1"/>
+    <PackageReference Include="Refractored.MvvmHelpers">
+      <Version>1.3.2.47-beta</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.6" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamFormsPrototype\XamFormsPrototype.csproj">
-      <Project>{E3EEB51D-F2EA-425B-B668-03D6A9D07975}</Project>
+      <Project>{496bf925-6fb1-4ae5-aa2f-563855772573}</Project>
       <Name>XamFormsPrototype</Name>
     </ProjectReference>
   </ItemGroup>

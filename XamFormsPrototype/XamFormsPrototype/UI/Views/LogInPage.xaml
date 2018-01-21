@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamFormsPrototype.UI.Views.LogInPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Source="xamagon.png"></Image>
+            <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Vertical" Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                <Entry Placeholder="First name" Text="{Binding FirstName}" WidthRequest="300"></Entry>
+                <Entry Placeholder="Last name" Text="{Binding LastName}" WidthRequest="300"></Entry>
+                <Entry Placeholder="Age" Text="{Binding Age}" WidthRequest="300"></Entry>
+                <Button Text="Log in" Command="{Binding LogInCommand}"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
