@@ -17,17 +17,21 @@ namespace XamFormsPrototype.UI.ViewModels
             get { return _firstName; }
             set { SetProperty(ref _firstName, value); }
         }
+
         public string LastName
         {
             get { return _lastName; }
             set { SetProperty(ref _lastName, value); }
         }
+
         public int Age
         {
             get { return _age; }
             set { SetProperty(ref _age, value); }
         }
+
         public ICommand LogInCommand => new Command(() => LogIn());
+
         public void LogIn()
         {
             MessagingCenter.Send(new NavigationMessage { Page = Pages.Main}, string.Empty);

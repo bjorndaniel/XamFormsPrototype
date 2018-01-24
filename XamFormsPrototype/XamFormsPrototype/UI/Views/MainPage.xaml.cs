@@ -14,19 +14,24 @@ namespace XamFormsPrototype.UI.Views
             InitializeComponent();
             MessagingCenter.Subscribe<NavigationMessage>(this, string.Empty, (m) =>
             {
-                Page page;
-                switch (m.Page)
-                {
-                    case Pages.Page2:
-                        page = (Page)Activator.CreateInstance(typeof(Page2));
-                        break;
-                    default:
-                        page = (Page)Activator.CreateInstance(typeof(Page1));
-                        break;
-                }
-                Detail = new NavigationPage(page);
-                IsPresented = false;
+                Navigate(m);
             });
+        }
+
+        private void Navigate(NavigationMessage m)
+        {
+            Page page;
+            switch (m.Page)
+            {
+                case Pages.Albums:
+                    page = (Page)Activator.CreateInstance(typeof(AlbumsPage));
+                    break;
+                default:
+                    page = (Page)Activator.CreateInstance(typeof(UsersPage));
+                    break;
+            }
+            Detail = new NavigationPage(page);
+            IsPresented = false;
         }
     }
 }

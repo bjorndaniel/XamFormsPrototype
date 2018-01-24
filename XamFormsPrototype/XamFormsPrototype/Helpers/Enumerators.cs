@@ -4,7 +4,7 @@
     {
         LogIn,
         Main,
-        Page1,
-        Page2
+        Albums,
+        Users
     }
 }

@@ -30,12 +30,6 @@ namespace XamFormsPrototype.UI.ViewModels
 
         public ICommand ItemSelectedCommand => new Command(() => Navigate());
 
-        private void Navigate()
-        {
-            MessagingCenter.Send(new NavigationMessage { Page = SelectedItem.PageType }, string.Empty);
-            SelectedItem = null;
-        }
-
         public async Task<bool> Initialize()
         {
             MenuItems = new List<MainPageMenuItem>
@@ -43,17 +37,24 @@ namespace XamFormsPrototype.UI.ViewModels
                 new MainPageMenuItem
                 {
                     Id = 1,
-                    PageType = Pages.Page1,
-                    Title = "Page 1"
+                    PageType = Pages.Users,
+                    Title = "Users"
                 },
                 new MainPageMenuItem
                 {
                     Id = 2,
-                    PageType = Pages.Page2,
-                    Title = "Page 2"
+                    PageType = Pages.Albums,
+                    Title = "Albums"
                 }
             };
             return await Task.FromResult(true);
         }
+
+        private void Navigate()
+        {
+            MessagingCenter.Send(new NavigationMessage { Page = SelectedItem.PageType }, string.Empty);
+            SelectedItem = null;
+        }
+
     }
 }
