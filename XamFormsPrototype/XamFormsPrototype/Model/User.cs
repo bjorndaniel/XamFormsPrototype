@@ -14,5 +14,6 @@ namespace XamFormsPrototype.Model
         public string Email { get; set; }
         [JsonProperty("address")]
         public Address Address { get; set; }
+        public int? Age { get; set; }
     }
 }

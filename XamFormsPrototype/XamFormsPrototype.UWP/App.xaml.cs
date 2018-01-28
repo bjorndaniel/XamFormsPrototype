@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using XamFormsPrototype.Contracts;
 
 namespace XamFormsPrototype.UWP
 {
@@ -53,6 +54,7 @@ namespace XamFormsPrototype.UWP
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 Xamarin.Forms.Forms.Init(e);
+                XamFormsPrototype.App.Container.Register(typeof(IFileHelper), typeof(FileHelper));
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

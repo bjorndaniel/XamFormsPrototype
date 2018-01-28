@@ -10,7 +10,7 @@
   <MasterDetailPage.Detail>
     <NavigationPage>
       <x:Arguments>
-        <pages:Page1/>
+        <pages:UsersPage/>
       </x:Arguments>
     </NavigationPage>
   </MasterDetailPage.Detail>

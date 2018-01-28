@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using XamFormsPrototype.Contracts;
 
 namespace XamFormsPrototype.iOS
 {
@@ -23,6 +24,7 @@ namespace XamFormsPrototype.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            App.Container.Register(typeof(IFileHelper), typeof(FileHelper));
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

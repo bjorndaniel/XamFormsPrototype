@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Reflection;
+using XamFormsPrototype.Contracts;
+using XamFormsPrototype.DependencyResolution;
 
 namespace XamFormsPrototype.Tests.Helpers
 {
@@ -19,7 +22,6 @@ namespace XamFormsPrototype.Tests.Helpers
                     {
                         Implementation = typeof(TestClass2),
                         Interface = typeof(ITestClass2),
-                        ConstructorParameter = ("name", "I am the implementation of ITestClass with constructor parameter")
                     },
                     new RegistryEntry
                     {
@@ -28,7 +30,7 @@ namespace XamFormsPrototype.Tests.Helpers
                     },
                     new RegistryEntry
                     {
-                        Implementation = typeof(xSonicRepository),
+                        Implementation = typeof(Repository.Repository),
                         Interface = typeof(IRepository),
                     }
                 };

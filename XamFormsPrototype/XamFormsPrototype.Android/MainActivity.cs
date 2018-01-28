@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using XamFormsPrototype.Contracts;
 
 namespace XamFormsPrototype.Droid
 {
@@ -20,6 +21,7 @@ namespace XamFormsPrototype.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            App.Container.Register(typeof(IFileHelper), typeof(FileHelper));
             LoadApplication(new App());
         }
     }
