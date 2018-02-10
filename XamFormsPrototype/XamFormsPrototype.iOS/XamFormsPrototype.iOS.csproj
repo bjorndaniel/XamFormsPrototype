@@ -13,6 +13,7 @@
     <AssemblyName>XamFormsPrototype.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <BuildForLiveUnitTesting>false</BuildForLiveUnitTesting>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>

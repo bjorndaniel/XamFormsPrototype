@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsPrototype.UWP", "Xa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamFormsPrototype", "XamFormsPrototype\XamFormsPrototype\XamFormsPrototype.csproj", "{496BF925-6FB1-4AE5-AA2F-563855772573}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsPrototype.Tests", "XamFormsPrototype.Tests\XamFormsPrototype.Tests.csproj", "{BF1158DC-972C-4113-B707-33AFF9232511}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamFormsPrototype.Tests", "XamFormsPrototype.Tests\XamFormsPrototype.Tests.csproj", "{BF1158DC-972C-4113-B707-33AFF9232511}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nugets", "Nugets", "{70695AEB-3D67-47A3-AB1B-4DAAF604A4AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
