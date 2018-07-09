@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using System;
 using System.Reflection;
 using XamFormsPrototype.Helpers;
 using XamFormsPrototype.Model;
@@ -33,6 +34,38 @@ namespace XamFormsPrototype.Tests
             });
             Then(() => Assert.Single(result));
         }
+
+        [Fact]
+        public void Can_Get_Properties_As_Formdata()
+        {
+            var target = Given_an_object_with_values();
+            var result = When(() => target.ToFormDataString());
+            Then(() => Assert.Equal("Id=1&Title=Test album&UserId=2", result));
+        }
+
+        [Fact]
+        public void Can_Get_Properties_As_Formdata_With_Null_Values()
+        {
+            var target = Given_an_object_with_null_values();
+            var result = When(() => target.ToFormDataString());
+            Then(() => Assert.Equal("City=A city&Zipcode=123 45", result));
+        }
+
+        private Album Given_an_object_with_values() =>
+            new Album
+            {
+                Id = 1,
+                Title = "Test album",
+                UserId = 2
+            };
+    
+        private Address Given_an_object_with_null_values() =>
+            new Address
+            {
+                City = "A city",
+                Zipcode = "123 45"
+            };
+
 
         private static void Then_source_and_result_should_be_equal(TestSource source, TestTarget result)
         {
@@ -70,5 +103,6 @@ namespace XamFormsPrototype.Tests
                 }
             };
         }
+
     }
 }

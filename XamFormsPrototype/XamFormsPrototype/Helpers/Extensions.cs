@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Text;
 using XamFormsPrototype.UI.Validation;
 
 namespace XamFormsPrototype.Helpers
@@ -68,5 +69,20 @@ namespace XamFormsPrototype.Helpers
 
         public static ValidatableObject<int> AsValidatable(this int target) =>
             new ValidatableObject<int> { Value = target };
+
+        public static string ToFormDataString<T>(this T target) where T : class
+        {
+            var builder = new StringBuilder();
+            foreach(var prop in typeof(T).GetProperties().OrderBy(_ => _.Name))
+            {
+                var value = prop.GetValue(target);
+                if(value != null)
+                {
+                    builder.Append($"{prop.Name}={value}&");
+                }
+            }
+            var result = builder.ToString();
+            return result?.Length > 1 ? result.Substring(0, result.Length - 1) : string.Empty;
+        }
     }
 }
